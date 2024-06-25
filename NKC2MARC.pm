@@ -3,7 +3,7 @@ package App::NKC2MARC;
 use strict;
 use warnings;
 
-use Encode qw(decode_utf8 encode_utf8);
+use Encode qw(encode_utf8);
 use English;
 use Error::Pure qw(err);
 use Getopt::Std;
