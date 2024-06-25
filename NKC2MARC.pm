@@ -154,24 +154,12 @@ Returns 1 for error, 0 for success.
 
 =head1 DEPENDENCIES
 
-L<Business::ISBN>,
 L<Encode>,
+L<English>,
 L<Error::Pure>,
 L<Getopt::Std>,
-L<MARC::Convert::Wikidata>,
-L<MARC::Record>,
-L<ZOOM>,
-L<WQS::SPARQL>,
-L<WQS::SPARQL::Query::Count>,
-L<WQS::SPARQL::Query::Select>,
-L<WQS::SPARQL::Result>,
-L<Wikibase::API>,
-L<Wikibase::Cache>,
-L<Wikibase::Datatype::Print::Item>.
-L<Wikidata::Reconcilation::AudioBook>,
-L<Wikidata::Reconcilation::BookSeries>,
-L<Wikidata::Reconcilation::Periodical>,
-L<Wikidata::Reconcilation::VersionEditionOrTranslation>
+L<IO::Barf>,
+L<ZOOM>.
 
 =head1 REPOSITORY
 
