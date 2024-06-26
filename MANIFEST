@@ -20,6 +20,7 @@ MANIFEST			This list of files
 META.yml
 NKC2MARC.pm
 README
+SIGNATURE
 t/App-NKC2MARC/01-use.t
 t/App-NKC2MARC/02-version.t
 t/App-NKC2MARC/03-new.t
