@@ -154,6 +154,8 @@ Returns 1 for error, 0 for success.
 
 =head1 EXAMPLE
 
+=for comment filename=fetch_marc_record_via_isbn.pl
+
  use strict;
  use warnings;
 
@@ -161,14 +163,14 @@ Returns 1 for error, 0 for success.
 
  # Arguments.
  @ARGV = (
-         'Library',
+         '978-80-7370-353-0',
  );
 
  # Run.
  exit App::NKC2MARC->new->run;
 
- # Output like:
- # TODO
+ # Output:
+ # MARC record for '978-80-7370-353-0' was saved to cnb002751696.mrc.
 
 =head1 DEPENDENCIES
 

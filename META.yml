@@ -18,6 +18,7 @@ meta-spec:
 name: App-NKC2MARC
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt
