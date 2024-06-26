@@ -1,6 +1,5 @@
 TODO
 ====
-2. Add message about saving.
 3. Doc.
 4. Tests.
 5.
@@ -8,4 +7,7 @@ TODO
 Applied
 =======
 1. If I am searching over ISBN, I need to get cnb from record.
+OK [20240626] skim
+
+2. Add message about saving.
 OK [20240626] skim

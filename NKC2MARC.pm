@@ -98,6 +98,8 @@ sub run {
 	}
 	barf($ccnb.'.mrc', $raw_record);
 
+	print "MARC record for '".$self->{'_id_of_book'}."' was saved to $ccnb.mrc.\n";
+
 	return 0;
 }
 
