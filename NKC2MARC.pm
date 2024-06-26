@@ -33,16 +33,12 @@ sub run {
 	# Process arguments.
 	$self->{'_opts'} = {
 		'h' => 0,
-		'v' => 0,
-		'u' => 0,
 	};
-	if (! getopts('huv', $self->{'_opts'}) || @ARGV < 1
+	if (! getopts('h', $self->{'_opts'}) || @ARGV < 1
 		|| $self->{'_opts'}->{'h'}) {
 
-		print STDERR "Usage: $0 [-h] [-u] [-v] [--version] id_of_book\n";
+		print STDERR "Usage: $0 [-h] [--version] id_of_book\n";
 		print STDERR "\t-h\t\t\tPrint help.\n";
-		print STDERR "\t-u\t\t\tUpload (instead of print).\n";
-		print STDERR "\t-v\t\t\tVerbose mode.\n";
 		print STDERR "\t--version\t\tPrint version.\n";
 		print STDERR "\tid_of_book\t\tIdentifier of book e.g. Czech ".
 			"national bibliography id or ISBN\n";
