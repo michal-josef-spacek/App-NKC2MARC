@@ -8,6 +8,7 @@ use English;
 use Error::Pure qw(err);
 use Getopt::Std;
 use IO::Barf qw(barf);
+use MARC::Record;
 use ZOOM;
 
 our $VERSION = 0.01;
@@ -91,9 +92,24 @@ sub run {
 		}
 	}
 	my $raw_record = $rs->record(0)->raw;
+	my $usmarc = MARC::Record->new_from_usmarc($raw_record);
+	if (! defined $ccnb) {
+		$ccnb = $self->_subfield($usmarc, '015', 'a');
+	}
 	barf($ccnb.'.mrc', $raw_record);
 
 	return 0;
+}
+
+sub _subfield {
+	my ($self, $obj, $field, $subfield) = @_;
+
+	my $field_value = $obj->field($field);
+	if (! defined $field_value) {
+		return;
+	}
+
+	return $field_value->subfield($subfield);
 }
 
 1;
@@ -159,6 +175,7 @@ L<English>,
 L<Error::Pure>,
 L<Getopt::Std>,
 L<IO::Barf>,
+L<MARC::Record>,
 L<ZOOM>.
 
 =head1 REPOSITORY

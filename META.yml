@@ -27,6 +27,7 @@ requires:
   Error::Pure: 0
   Getopt::Std: 0
   IO::Barf: 0
+  MARC::Record: 0
   ZOOM: 0
   perl: 5.6.0
 resources:

@@ -24,6 +24,7 @@ requires 'English' => 0;
 requires 'Error::Pure' => 0;
 requires 'Getopt::Std' => 0;
 requires 'IO::Barf' => 0;
+requires 'MARC::Record' => 0;
 requires 'ZOOM' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/App-NKC2MARC/issues',
 resources 'homepage' => 'https://github.com/michal-josef-spacek/App-NKC2MARC';
