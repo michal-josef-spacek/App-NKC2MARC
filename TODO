@@ -1,6 +1,5 @@
 TODO
 ====
-3. Doc.
 4. Tests.
 5. Fix CI.
 6.
@@ -12,3 +11,6 @@ OK [20240626] skim
 
 2. Add message about saving.
 OK [20240626] skim
+
+3. Doc.
+OK [20240704] skim

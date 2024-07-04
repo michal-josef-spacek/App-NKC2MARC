@@ -1,6 +1,7 @@
 0.02
  - Add -o option for output format.
  - Add tests for run().
+ - Fix doc.
  - Remove obsolete tab from help.
  - Rewrite arguments process to more intuitive way.
 
