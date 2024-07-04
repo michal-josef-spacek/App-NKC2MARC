@@ -34,8 +34,9 @@ sub run {
 	$self->{'_opts'} = {
 		'h' => 0,
 	};
-	if (! getopts('h', $self->{'_opts'}) || @ARGV < 1
-		|| $self->{'_opts'}->{'h'}) {
+	if (! getopts('h', $self->{'_opts'})
+		|| $self->{'_opts'}->{'h'}
+		|| @ARGV < 1) {
 
 		print STDERR "Usage: $0 [-h] [--version] id_of_book\n";
 		print STDERR "\t-h\t\t\tPrint help.\n";
