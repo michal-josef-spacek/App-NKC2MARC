@@ -1,4 +1,4 @@
-0.02
+0.02 2024-07-04T17:19:02+02:00
  - Add -o option for output format.
  - Add tests for run().
  - Fix doc.
