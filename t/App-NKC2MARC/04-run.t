@@ -58,10 +58,11 @@ sub help {
 		$script =~ s/\\/\//msg;
 	}
 	my $help = <<"END";
-Usage: $script [-h] [--version] id_of_book
-	-h		Print help.
-	--version	Print version.
-	id_of_book	Identifier of book e.g. Czech national bibliography id or ISBN
+Usage: $script [-h] [-o output_format] [--version] id_of_book
+	-h			Print help.
+	-o output_format	Output format (usmarc, xml - default).
+	--version		Print version.
+	id_of_book		Identifier of book e.g. Czech national bibliography id or ISBN
 END
 
 	return $help;

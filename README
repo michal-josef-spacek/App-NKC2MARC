@@ -3,12 +3,28 @@ NAME
     Republic to MARC file.
 
 SYNOPSIS
-     nkc-to-marc [-h] [--version] id_of_book
+     nkc-to-marc [-h] [-o output_format] [--version] id_of_book
 
 ARGUMENTS
     *       "-h"
 
             Print help.
+
+    *       "-o output_format"
+
+            Output format.
+
+            Default value is 'xml'.
+
+            Possible formats are:
+
+            *   usmarc
+
+                USMARC format.
+
+            *   xml
+
+                MARC XML format.
 
     *       "--version"
 

@@ -28,7 +28,7 @@ nkc-to-marc - Tool to fetch record from National library of the Czech Republic t
 
 =head1 SYNOPSIS
 
- nkc-to-marc [-h] [--version] id_of_book
+ nkc-to-marc [-h] [-o output_format] [--version] id_of_book
 
 =head1 ARGUMENTS
 
@@ -37,6 +37,26 @@ nkc-to-marc - Tool to fetch record from National library of the Czech Republic t
 =item * C<-h>
 
 Print help.
+
+=item * C<-o output_format>
+
+Output format.
+
+Default value is 'xml'.
+
+Possible formats are:
+
+=over
+
+=item * usmarc
+
+USMARC format.
+
+=item * xml
+
+MARC XML format.
+
+=back
 
 =item * C<--version>
 
