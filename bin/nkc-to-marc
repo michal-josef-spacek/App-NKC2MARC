@@ -28,7 +28,7 @@ nkc-to-marc - Tool to fetch record from National library of the Czech Republic t
 
 =head1 SYNOPSIS
 
- nkc-to-marc [-h] [-o output_format] [--version] id_of_book
+ nkc-to-marc [-h] [-o output_format] [--version] id_of_book ..
 
 =head1 ARGUMENTS
 
@@ -62,9 +62,9 @@ MARC XML format.
 
 Print version of script.
 
-=item * C<id_of_book>
+=item * C<id_of_book ..>
 
-Identifier of book.
+Identifier of book. Could be multiple values.
 Possible ids are: ISBN or Czech national bibliography id.
 
 =back

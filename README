@@ -3,7 +3,7 @@ NAME
     Republic to MARC file.
 
 SYNOPSIS
-     nkc-to-marc [-h] [-o output_format] [--version] id_of_book
+     nkc-to-marc [-h] [-o output_format] [--version] id_of_book ..
 
 ARGUMENTS
     *       "-h"
@@ -30,10 +30,10 @@ ARGUMENTS
 
             Print version of script.
 
-    *       "id_of_book"
+    *       "id_of_book .."
 
-            Identifier of book. Possible ids are: ISBN or Czech national
-            bibliography id.
+            Identifier of book. Could be multiple values. Possible ids are:
+            ISBN or Czech national bibliography id.
 
 EXAMPLE1
      # Fetch book edition defined by ISBN number.
