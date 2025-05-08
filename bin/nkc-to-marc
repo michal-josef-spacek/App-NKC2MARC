@@ -5,7 +5,7 @@ use warnings;
 
 use App::NKC2MARC;
 
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 # Run.
 exit App::NKC2MARC->new->run;
@@ -97,6 +97,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.03
+0.04
 
 =cut
