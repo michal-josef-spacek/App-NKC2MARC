@@ -1,5 +1,6 @@
 0.03
  - Add support for downloading of multiple records.
+ - Add test for bad output format.
  - Update copyright years.
 
 0.02 2024-07-04T17:19:02+02:00
