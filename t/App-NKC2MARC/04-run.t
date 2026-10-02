@@ -75,7 +75,7 @@ Usage: $script [-h] [-o output_format] [--version] id_of_book ..
 	-h			Print help.
 	-o output_format	Output format (usmarc, xml - default).
 	--version		Print version.
-	id_of_book ..		Identifier of book e.g. Czech national bibliography id or ISBN
+	id_of_book ..		Identifier of book e.g. Czech national bibliography id or system number or ISBN
 END
 
 	return $help;

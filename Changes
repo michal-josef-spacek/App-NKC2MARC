@@ -1,4 +1,5 @@
 0.04
+ - Add support for system number query.
 
 0.03 2025-05-08T14:21:57+02:00
  - Add support for downloading of multiple records.

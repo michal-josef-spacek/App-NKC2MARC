@@ -65,7 +65,7 @@ Print version of script.
 =item * C<id_of_book ..>
 
 Identifier of book. Could be multiple values.
-Possible ids are: ISBN or Czech national bibliography id.
+Possible ids are: ISBN or Czech national bibliography id or ČNB system number.
 
 =back
 
@@ -78,6 +78,11 @@ Possible ids are: ISBN or Czech national bibliography id.
 
  # Fetch book edition defined by Czech national bibliography id
  nkc-to-marc cnb003322696
+
+=head1 EXAMPLE3
+
+ # Fetch book edition defined by ČNB system number
+ nkc-to-marc 000000096
 
 =head1 REPOSITORY
 

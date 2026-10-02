@@ -49,7 +49,7 @@ sub run {
 		print STDERR "\t-o output_format\tOutput format (usmarc, xml - default).\n";
 		print STDERR "\t--version\t\tPrint version.\n";
 		print STDERR "\tid_of_book ..\t\tIdentifier of book e.g. Czech ".
-			"national bibliography id or ISBN\n";
+			"national bibliography id or system number or ISBN\n";
 		return 1;
 	}
 	my @book_ids = @ARGV;
@@ -94,6 +94,15 @@ sub run {
 				return 1;
 			}
 			$ccnb = $book_id;
+
+		# System number.
+		} elsif ($book_id =~ m/^\d+$/ms) {
+			$rs = $conn->search_pqf('@attr 1=1032 '.$book_id);
+			if (! defined $rs || ! $rs->size) {
+				print STDERR encode_utf8("Edition with system number '$book_id' doesn't exist.\n");
+				return 1;
+			}
+
 		## ISBN
 		} else {
 			$rs = $conn->search_pqf('@attr 1=7 '.$book_id);
