@@ -6,7 +6,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Tool to fetch record from National library of the Czech Republic to MARC file.';
-author 'Michal Josef Spacek <skim@cpan.org>';
+author 'Michal Josef Spacek <michal.josef.spacek@gmail.com>';
 author_requires 'English' => 0;
 author_requires 'File::Object' => 0.05;
 author_requires 'Test::More' => 0;
