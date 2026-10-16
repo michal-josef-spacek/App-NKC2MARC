@@ -1,5 +1,6 @@
 0.04
  - Add support for system number query.
+ - Remove XXX from tests.
  - Update author email.
  - Update copyright years.
 

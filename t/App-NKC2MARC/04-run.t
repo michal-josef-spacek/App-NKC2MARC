@@ -4,7 +4,6 @@ use warnings;
 use App::NKC2MARC;
 use English;
 use Error::Pure::Utils qw(clean);
-use File::Object;
 use File::Spec::Functions qw(abs2rel);
 use Test::More 'tests' => 6;
 use Test::NoWarnings;
@@ -65,8 +64,7 @@ is($EVAL_ERROR, "Bad output format.\n",
 clean();
 
 sub help {
-	my $script = abs2rel(File::Object->new->file('04-run.t')->s);
-	# XXX Hack for missing abs2rel on Windows.
+	my $script = abs2rel(__FILE__);
 	if ($OSNAME eq 'MSWin32') {
 		$script =~ s/\\/\//msg;
 	}
