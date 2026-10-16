@@ -2,7 +2,8 @@ TODO
 ====
 4. Tests.
 5. Fix CI.
-6.
+6. Rewrite to NKC::Id::Utils::check_cnb_id()
+7.
 
 Applied
 =======
