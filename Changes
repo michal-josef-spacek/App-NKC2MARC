@@ -1,6 +1,7 @@
 0.04
  - Add support for system number query.
  - Remove XXX from tests.
+ - Rewrite to NKC::Id::Utils.
  - Update author email.
  - Update copyright years.
 

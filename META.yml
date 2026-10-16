@@ -36,6 +36,7 @@ requires:
   List::Util: 1.33
   MARC::File::XML: 0
   MARC::Record: 0
+  NKC::Id::Utils: 0
   Readonly: 0
   ZOOM: 0
   perl: 5.6.0

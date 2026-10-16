@@ -11,6 +11,7 @@ use IO::Barf qw(barf);
 use List::Util 1.33 qw(none);
 use MARC::File::XML;
 use MARC::Record;
+use NKC::Id::Utils qw(check_cnb_id);
 use Readonly;
 use ZOOM;
 
@@ -84,33 +85,37 @@ sub run {
 	$conn->option(preferredRecordSyntax => $c->{'record'});
 
 	foreach my $book_id (@book_ids) {
-		# Get MARC record from library.
 		my ($rs, $ccnb);
-		## CCNB
-		if ($book_id =~ m/^cnb\d+$/ms) {
-			$rs = $conn->search_pqf('@attr 1=48 '.$book_id);
+		my $book_id_hr = check_cnb_id($book_id);
+
+		# CCNB
+		if (exists $book_id_hr->{'cnb'}) {
+			$rs = $conn->search_pqf('@attr 1=48 '.$book_id_hr->{'cnb'});
 			if (! defined $rs || ! $rs->size) {
-				print STDERR encode_utf8("Edition with ČČNB '$book_id' doesn't exist.\n");
+				print STDERR encode_utf8("Edition with ČČNB '$book_id_hr->{'cnb'}' doesn't exist.\n");
 				return 1;
 			}
-			$ccnb = $book_id;
+			$ccnb = $book_id_hr->{'cnb'};
 
 		# System number.
-		} elsif ($book_id =~ m/^\d+$/ms) {
-			$rs = $conn->search_pqf('@attr 1=1032 '.$book_id);
+		} elsif (exists $book_id_hr->{'system_id'}) {
+			$rs = $conn->search_pqf('@attr 1=1032 '.$book_id_hr->{'system_id'});
 			if (! defined $rs || ! $rs->size) {
-				print STDERR encode_utf8("Edition with system number '$book_id' doesn't exist.\n");
+				print STDERR encode_utf8("Edition with system number '$book_id_hr->{'system_id'}' doesn't exist.\n");
 				return 1;
 			}
 
-		## ISBN
-		} else {
-			$rs = $conn->search_pqf('@attr 1=7 '.$book_id);
+		# ISBN
+		} elsif (exists $book_id_hr->{'isbn'}) {
+			$rs = $conn->search_pqf('@attr 1=7 '.$book_id_hr->{'isbn'});
 			if (! defined $rs || ! $rs->size) {
-				print STDERR "Edition with ISBN '$book_id' doesn't exist.\n";
+				print STDERR "Edition with ISBN '$book_id_hr->{'isbn'}' doesn't exist.\n";
 				return 1;
 			}
+		} else {
+			err "Processing of '$book_id' isn't supported.";
 		}
+
 		my $raw_record = $rs->record(0)->raw;
 		my $usmarc = MARC::Record->new_from_usmarc($raw_record);
 		if (! defined $ccnb) {

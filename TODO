@@ -2,7 +2,6 @@ TODO
 ====
 4. Tests.
 5. Fix CI.
-6. Rewrite to NKC::Id::Utils::check_cnb_id()
 7.
 
 Applied
@@ -15,3 +14,6 @@ OK [20240626] skim
 
 3. Doc.
 OK [20240704] skim
+
+6. Rewrite to NKC::Id::Utils::check_cnb_id()
+OK [20261016] skim

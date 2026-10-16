@@ -27,6 +27,7 @@ requires 'IO::Barf' => 0;
 requires 'List::Util' => 1.33;
 requires 'MARC::File::XML' => 0;
 requires 'MARC::Record' => 0;
+requires 'NKC::Id::Utils' => 0;
 requires 'Readonly' => 0;
 requires 'ZOOM' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/App-NKC2MARC/issues',
